@@ -61,7 +61,7 @@ manual_     Y    N    | Helps you obtain a certificate by giving you instruction
 =========== ==== ==== =============================================================== =============================
 
 Under the hood, plugins use one of several ACME protocol challenges_ to
-prove you control a domain.  The options are http-01_ (which uses port 80),
+prove you control a domain. The options are http-01_ (which uses port 80),
 tls-sni-01_ (port 443) and dns-01_ (requiring configuration of a DNS server on
 port 53, though that's often not the same machine as your webserver). A few
 plugins support more than one challenge type, in which case you can choose one
@@ -102,7 +102,7 @@ If you're getting a certificate for many domains at once, the plugin
 needs to know where each domain's files are served from, which could
 potentially be a separate directory for each domain. When requesting a
 certificate for multiple domains, each domain will use the most recently
-specified ``--webroot-path``.  So, for instance,
+specified ``--webroot-path``. So, for instance,
 
 ::
 
@@ -193,7 +193,7 @@ For example, for the domain ``example.com``, a zone file entry would look like:
         _acme-challenge.example.com. 300 IN TXT "gfj9Xq...Rg85nM"
 
 Additionally you can specify scripts to prepare for validation and perform the
-authentication procedure  and/or clean up after it by using the
+authentication procedure and/or clean up after it by using the
 ``--manual-auth-hook`` and ``--manual-cleanup-hook`` flags. This is described in
 more depth in the hooks_ section.
 
@@ -304,7 +304,7 @@ Example:
 
 .. code-block:: none
 
-  certbot --expand -d existing.com example.com,newdomain.com
+  certbot --expand -d existing.com,example.com,newdomain.com
 
 If you prefer, you can specify the domains individually like this:
 
@@ -759,7 +759,7 @@ By default, the following locations are searched:
 Certbot command-line options
 ============================
 
-Certbot supports a lot of command line options.  Here's the full list, from
+Certbot supports a lot of command line options. Here's the full list, from
 ``certbot --help all``:
 
 .. literalinclude:: cli-help.txt
